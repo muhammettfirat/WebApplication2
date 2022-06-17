@@ -1,0 +1,15 @@
+﻿@model WebApplication7.Models.Kullanici
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+@using (Html.BeginForm())
+{
+    <label aria-describedby="ka">Kullanici Adi</label>
+    @Html.TextBoxFor(x => x.KullaniciAdi, new { @class = "text", @aria_describedby = "ka" })
+    <br />
+    <label aria-describedby="ks">Sifre</label>
+    @Html.TextBoxFor(x => x.Sifre, new { @class = "text" , @aria_describedby = "ks" })<br />
+    <button type="submit">Giriş</button>
+}
